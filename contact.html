@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Web - Contact Form</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        form {
+            width: 400px;
+            margin: 20px 0px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        input {
+            margin-top: 7px;
+            border: 1px solid black;
+            background-color: whitesmoke;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+
+        input:focus {
+            border: 1px solid orangered;
+            outline: orangered solid 1px;
+        }
+
+        select {
+            margin-top: 7px;
+            border: 1px solid black;
+            background-color: whitesmoke;
+            width: 105%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid grey;
+            font-size: 15px;
+        }
+
+        select:focus {
+            border: 1px solid orangered;
+            outline: orangered solid 1px;
+        }
+
+        textarea {
+            margin-top: 7px;
+            border: 1px solid black;
+            background-color: whitesmoke;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+
+        textarea:focus {
+            border: 1px solid orangered;
+            outline: orangered solid 1px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            padding: 9px 35px;
+        }
+
+        button:hover {
+            background-color: rgba(255, 94, 0, 0.856);
+        }
+    </style>
+    <script src="assets/script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <a href="index.html"><img src="assets/logo.png" /></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section" style="justify-content: center;">
+            <form>
+                <div>
+                    <label for="input-name">Name</label>
+                    <input type="text" id="input-name">
+                </div>
+                <div>
+                    <label for="input-email">Email</label>
+                    <input type="email" id="input-email">
+                </div>
+
+                <div>
+                    <label for="input-phone">Phone Number</label>
+                    <input type="number" id="input-phone">
+                </div>
+
+                <div>
+                    <label for="input-subject">Subject</label>
+                    <Select id="input-subject">
+                        <option value="" selected hidden>Choose Subject</option>
+                        <option value="Let's collaboration">Let's collaboration</option>
+                        <option value="let's talk">let's talk</option>
+                        <option value="Help to creat some project">Help to creat some project</option>
+                        <option value="i'm, hiring">i'm, hiring</option>
+                    </Select>
+                </div>
+
+                <div>
+                    <label for="input-message">Your Message</label>
+                    <textarea id="input-message"></textarea>
+                </div>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
