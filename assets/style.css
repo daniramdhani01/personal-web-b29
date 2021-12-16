@@ -1,8 +1,7 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
     margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar */
@@ -57,6 +56,11 @@ nav .right a:hover{
     outline: orangered solid 1px;
     color: orangered;
 }
+
+nav ul li a.list-active {
+    color: #ec4d37;
+    font-weight: 700;
+  }
 /* End of Navbar */
 
 .container{
@@ -73,11 +77,11 @@ nav .right a:hover{
 }
 
 .section .left{
-    flex: 40%;
+    flex: 25%;
 }
 
 .section .right{
-    flex: 60%;
+    flex: 75%;
     padding-left: 30px;
 }
 .section .right .sosmed img {

@@ -8,20 +8,14 @@
 <body>
   <!-- NavBar -->
   <nav>
-    <div class="left-side">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="logo" />
-      </a>
+    <div class="left">
+      <a href="index.html"><img src="assets/logo.png" alt="logo" /></a>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="blog.html" class="list-active">Blog</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="list-active">Blog</a></li>
       </ul>
     </div>
-    <div class="right-side">
+    <div class="right">
       <a href="contact.html"> Contact Me </a>
     </div>
   </nav>
@@ -49,8 +43,9 @@
                 <p>Attach File</p>
                 <img src="assets/file.png" alt="file" />
               </label>
-              <input type="file" id="input-blog-image" hidden />
+              <input type="file" id="input-blog-image" onchange="handleChange()" hidden />
             </div>
+            <span id="preview-thumbnail"></span>
           </div>
           <div class="button-group">
             <button type="submit" onsubmit="addBlog()">Post Blog</button>
@@ -59,7 +54,8 @@
       </div>
     </div>
     <hr class="line" />
-    <div id="contents" class="blog-list">
+    <div id="contents" class="blog-list"></div>
+    <div class="blog-list">
       <!-- dynamic content would be here -->
       <div class="blog-list-item">
         <div class="blog-image">
