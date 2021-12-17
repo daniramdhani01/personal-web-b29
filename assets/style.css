@@ -64,8 +64,8 @@ nav ul li a.list-active {
 /* End of Navbar */
 
 .container{
-    /* margin-top: 10px; */
     height: 91%;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
