@@ -43,21 +43,42 @@ function addBlog(event) {
     let content = document.getElementById('input-blog-content').value
     let image = document.getElementById('input-blog-image')
 
-    image = URL.createObjectURL(image.files[0])
+    // console.log(typeof image)
+    // console.log(image)
+    // console.log(image.value)
+    // console.log(image.files[0])
 
-    let blog = {
-        title: title,
-        content: content,
-        image: image,
-        author: 'dani',
-        postAt: new Date()
+    if (title == '') {
+        alert(`please input title`)
+    } else if (content == '') {
+        alert(`please input content`)
+    } else if (image.value == '') {
+        alert(`please insert image`)
     }
+    else {
 
-    blogs.push(blog)
+        image = URL.createObjectURL(image.files[0])
 
-    // console.log(blogs)
+        let blog = {
+            title: title,
+            content: content,
+            image: image,
+            author: 'dani',
+            postAt: new Date()
+        }
 
-    renderBlog()
+        blogs.push(blog)
+
+        console.log(blogs)
+
+        renderBlog()
+
+        document.getElementById('input-blog-title').value = ''
+        document.getElementById('input-blog-content').value = ''
+        document.getElementById('input-blog-image').value = ''
+        const previewElement = document.getElementById('preview-thumbnail');
+        previewElement.innerHTML = ``
+    }
 }
 
 function renderBlog() {
@@ -85,6 +106,7 @@ function renderBlog() {
                                     </div>
                                 </div>`
     }
+
 }
 
 let month = [
