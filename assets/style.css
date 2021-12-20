@@ -57,18 +57,44 @@ nav .right a:hover{
     outline: orangered solid 1px;
     color: orangered;
 }
-
+nav .right a:active{
+    background-color: orange;
+    color: white;
+    outline: unset;
+}
 nav ul li a.list-active {
     color: #ec4d37;
     font-weight: 700;
   }
 /* End of Navbar */
 
+/*  profile  */
+table{
+    margin: 10px 0px 15px 0px;
+}
+table tr th{
+    background-color: grey;   
+}
+table tr td{
+    color: grey;
+}
+
+.badges{
+    padding: 5px;
+    background-color: orangered;
+    color: white;
+    border-radius: 0px 10px 0px 10px;
+}
+
+/* end of profile */
 .container{
     height: 91%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.container p{
+    color: grey;
 }
 
 .container .section{
@@ -78,13 +104,15 @@ nav ul li a.list-active {
 }
 
 .section .left{
-    flex: 25%;
+    flex: 30%;
     padding-top: 20px;
+    padding-right: 30px;
+    margin-bottom: 10px;
 }
 
 .section .right{
-    flex: 75%;
-    padding-left: 30px;
+    flex: 70%;
+    /* padding-left: 30px; */
     padding-top: 20px;
 }
 .section .right .sosmed img {
@@ -103,10 +131,12 @@ nav ul li a.list-active {
 .section .right .skill-container{
     display: flex;
 }
-.section .right .skill-container div{
+.section .right .skill-container .satu, .dua, .tiga{
     flex: 1;
+    /* padding: 5px; */
 }
 .section .right .skill-container div img{
     width: 60px;
     height: 60px;
 }
+

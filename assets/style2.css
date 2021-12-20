@@ -57,7 +57,11 @@ nav .right a:hover{
   outline: orangered solid 1px;
   color: orangered;
 }
-
+nav .right a:active{
+  background-color: orange;
+  color: white;
+  outline: unset;
+}
 nav ul li a.list-active {
   color: #ec4d37;
   font-weight: 700;
@@ -79,7 +83,8 @@ nav ul li a.list-active {
 }
 
 .blog-form .form-container {
-  width: 500px;
+  width: 40%;
+  /* background-color: orangered; */
 }
 
 .blog-form .form-container h1 {
@@ -104,6 +109,11 @@ select {
   background: #f4f3f3;
   border: 1px solid #c4c4c4;
   border-radius: 8px;
+}
+
+.blog-form input:focus, textarea:focus{
+  border: 1px solid orangered;
+  outline: orangered solid 1px;
 }
 
 .blog-form form textarea {
@@ -142,11 +152,14 @@ select {
   margin-top: 50px;
   padding: 8px 20px;
   font-size: 17px;
-  background: #ec4d37;
+  background: red;
   border-radius: 8px;
   border: none;
   color: #fff;
   cursor: pointer;
+}
+.blog-form form button:hover {
+  background-color: rgba(255, 94, 0, 0.856);
 }
 
 .blog hr {
@@ -163,6 +176,7 @@ select {
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .blog .blog-list .blog-list-item {
@@ -172,6 +186,7 @@ select {
   border: 2px solid #dbdbdb;
   border-radius: 8px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .blog .blog-list .blog-list-item .blog-image {
@@ -180,6 +195,7 @@ select {
 
 .blog .blog-list .blog-list-item .blog-image img {
   width: 100%;
+  min-width: 120px;
   height: 300px;
   object-fit: cover;
 }

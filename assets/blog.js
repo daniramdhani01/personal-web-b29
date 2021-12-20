@@ -32,7 +32,7 @@ function handleChange() {
     let image = document.getElementById('input-blog-image')
     const source = URL.createObjectURL(image.files[0]);
     const previewElement = document.getElementById('preview-thumbnail');
-    previewElement.innerHTML = `<img src="${source}" style="width: 250px; border-radius: 10px; box-shadow: 0px 0px 10px grey" class="mb-3"/>`
+    previewElement.innerHTML = `<img src="${source}" style="width: 50%;min-width: 150px; border-radius: 10px; box-shadow: 0px 0px 10px grey" class="mb-3"/>`
 }
 
 let blogs = []
@@ -153,4 +153,4 @@ function getDistanceTime(time) {
 
 setInterval(() => {
     renderBlog()
-}, 1000);
+}, 1000); 
